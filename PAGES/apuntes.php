@@ -138,19 +138,25 @@
                  $gestor = fopen($apuntes_data['url'], "r");
                  $line = fgets($gestor);
                  //echo '<iframe src='.htmlspecialchars($apuntes_data['url']).' title=></iframe><br>'; // leer todo del documento asociado al url????
-                 echo "<p>$line</p>";
+                 echo '<a href='.'vista_apunte.php?cID='.$contenido_id.'&url='.$apuntes_data['url'].'>';
+                 echo "<textarea rows='4' cols='60' disabled>$line</textarea>";
+                 echo "</a>";
                  fclose($gestor);
 
                  break;
              case "IMAGEN":
-                 echo '<img src="'.htmlspecialchars($apuntes_data['url']).'"width="390px" height="300px"><br>';
+                 echo '<a href='.'vista_apunte.php?cID='.$contenido_id.'&url='.$apuntes_data['url'].'>';// entre los "" colocar el nombre del archivo a crear
+                 echo '<img src="'.htmlspecialchars($apuntes_data['url']).'"width="300px" height="230px"><br>';
+                 echo '</a>';
                  break;
              case "VIDEO":
-                 echo '<video width="320" height="240" controls>'.
+                 echo '<a href='.'vista_apunte.php?cID='.$contenido_id.'&url='.$apuntes_data['url'].'>';
+                 echo '<video width="300" height="230" controls>'.
                         '<source src='.htmlspecialchars($apuntes_data['url']).'type="video/mp4">'.
                          '<source src='.htmlspecialchars($apuntes_data['url']).' type="video/ogg">
                           Your browser does not support the video tag.
                        </video>';
+                 echo "</a>";
                  break;
      
             }
