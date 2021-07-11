@@ -135,14 +135,18 @@
           
             switch($apuntes_data['tipoApunte']){
               case "TEXTO":
-                 $gestor = fopen($apuntes_data['url'], "r");
+                $url = $apuntes_data['url'];
+                 /*$gestor = fopen($apuntes_data['url'], "r");
                  $line = fgets($gestor);
                  //echo '<iframe src='.htmlspecialchars($apuntes_data['url']).' title=></iframe><br>'; // leer todo del documento asociado al url????
                  echo '<a href='.'vista_apunte.php?cID='.$contenido_id.'&url='.$apuntes_data['url'].'>';
                  echo "<textarea rows='4' cols='60' disabled>$line</textarea>";
                  echo "</a>";
-                 fclose($gestor);
-
+                 fclose($gestor);*/
+                 echo '<a href='.'vista_apunte.php?cID='.$contenido_id.'&url='.$apuntes_data['url'].'>';
+                 echo "<iframe style='disabled;' src='$url'></iframe>";
+                 echo "</a>";
+                 
                  break;
              case "IMAGEN":
                  echo '<a href='.'vista_apunte.php?cID='.$contenido_id.'&url='.$apuntes_data['url'].'>';// entre los "" colocar el nombre del archivo a crear
