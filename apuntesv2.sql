@@ -86,22 +86,7 @@ INSERT INTO `contenido` (`id`, `nombre`, `descripcion`, `fecha_creacion`, `fecha
 -- Estructura de tabla para la tabla `tipo`
 --
 
-DROP TABLE IF EXISTS `tipo`;
-CREATE TABLE IF NOT EXISTS `tipo` (
-  `tipo_id` int NOT NULL AUTO_INCREMENT,
-  `apunte_id` int NOT NULL,
-  `tipoApunte` varchar(10) NOT NULL,
-  PRIMARY KEY (`tipo_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `tipo`
---
-
-INSERT INTO `tipo` (`tipo_id`, `apunte_id`, `tipoApunte`) VALUES
-(1, 1, 'IMAGEN'),
-(2, 1, 'IMAGEN'),
-(3, 1, 'TEXTO');
 
 -- --------------------------------------------------------
 
