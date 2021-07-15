@@ -38,17 +38,14 @@ CREATE TABLE IF NOT EXISTS `apunte` (
   `tipoApunte` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `contenido_apunte` (`contenido_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Volcado de datos para la tabla `apunte`
 --
 
 INSERT INTO `apunte` (`id`, `contenido_id`, `nombre`, `url`, `fecha_creacion`, `fecha_actualizacion`, `tipoApunte`) VALUES
-(1, 5, 'apunte1', 'https://preview.redd.it/7s6dpd15yv271.jpg?auto=webp&s=29e321668379877c0f9ae9cfd510190e609b177e', '2021-06-07 21:25:32', '2021-06-08 01:25:32', 'IMAGEN'),
 (9, 5, 'apunte9', 'https://raw.githubusercontent.com/levos1/evaluacion-2/main/pruebatxt.txt', NULL, NULL, 'TEXTO'),
-(10, 5, 'apunte10', 'https://preview.redd.it/7s6dpd15yv271.jpg?auto=webp&s=29e321668379877c0f9ae9cfd510190e609b177e', '2021-06-07 21:35:36', '2021-06-07 21:53:07', 'IMAGEN'),
-(11, 5, 'apunte11', 'https://preview.redd.it/7s6dpd15yv271.jpg?auto=webp&s=29e321668379877c0f9ae9cfd510190e609b177e', '2021-06-08 01:53:33', '2021-06-08 01:53:33', 'IMAGEN'),
 (12, 5, 'apunte12', 'https://i.redd.it/zg97tal1u4y51.jpg', '2021-07-05 11:07:27', '2021-07-05 11:07:27', 'IMAGEN'),
 (13, 5, 'apunte13', 'https://i.pinimg.com/736x/fb/a6/2d/fba62dee7fcaa30c1d1e07d5bbdb2020.jpg', '2021-07-05 11:08:45', '2021-07-05 11:08:45', 'IMAGEN');
 
@@ -68,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `contenido` (
   `user_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_contenido` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Volcado de datos para la tabla `contenido`
@@ -100,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `user_name` char(50) DEFAULT NULL,
   `password` char(50) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
 
 --
 -- Volcado de datos para la tabla `usuario`
